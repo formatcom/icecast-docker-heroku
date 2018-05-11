@@ -6,5 +6,7 @@ ENV ICECAST_ADMIN_EMAIL formatcomvinicio@gmail.com
 ENV ICECAST_ADMIN_USERNAME admin
 ENV ICECAST_ADMIN_PASSWORD hackme
 
+# aaaAAAHHHH
+RUN sed -ri "s/<bind-address>127.0.0.1<\/bind-address>/<bind-address>0.0.0.0<\/bind-address>/g" /etc/icecast.xml
 # ASIGNAR EL PUERTO A HEROKU
 CMD sed -ri "s/<port>8000<\/port>/<port>$PORT<\/port>/g" /etc/icecast.xml && icecast -c /etc/icecast.xml
