@@ -1,0 +1,7 @@
+FROM infiniteproject/icecast:latest
+LABEL maintainer="formatcomvinicio@gmail.com"
+
+ENV ICECAST_SOURCE_PASSWORD hackme
+ENV ICECAST_ADMIN_EMAIL formatcomvinicio@gmail.com
+ENV ICECAST_ADMIN_USERNAME admin
+ENV ICECAST_ADMIN_PASSWORD hackme
