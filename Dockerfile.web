@@ -7,4 +7,4 @@ ENV ICECAST_ADMIN_USERNAME admin
 ENV ICECAST_ADMIN_PASSWORD hackme
 
 # ASIGNAR EL PUERTO A HEROKU
-CMD sed -ri "s/<port>8000<\/port>/<port>$PORT<\/port>/g" /etc/icecast.xml && /bin/icecast -c /etc/icecast.xml
+CMD sed -ri "s/<port>8000<\/port>/<port>$PORT<\/port>/g" /etc/icecast.xml && icecast -c /etc/icecast.xml
